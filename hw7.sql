@@ -9,8 +9,4 @@ INSERT INTO users VALUES
 
 SELECT * FROM users WHERE score > (SELECT AVG(score) FROM users);
 
-SELECT name FROM users WHERE challenge = (
-    SELECT challenge
-    FROM users
-    WHERE name = 'Farah'
-);
+SELECT name FROM users WHERE challenge = (SELECT challenge FROM users WHERE name = 'Farah');
