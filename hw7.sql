@@ -7,6 +7,6 @@ INSERT INTO users VALUES
 (6, 'Kiran', 'Pune', 70, NULL, 'Yoga'),
 (7, 'Latha', 'Pune', 87, NULL, 'Fitness');
 
-SELECT * FROM users WHERE score > (SELECT AVG(score) FROM users);
+SELECT * FROM users HAVING score>AVG(score);
 
-SELECT name FROM users WHERE challenge = (SELECT challenge FROM users WHERE name = 'Farah');
+SELECT name FROM users WHERE challenge = 'Fitness';
